@@ -1,3 +1,3 @@
-#Bash Scripting Summer 2019
+Bash Scripting Summer 2019
 ---
 
