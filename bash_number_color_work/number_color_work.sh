@@ -1,11 +1,7 @@
 #!/usr/bin/env bash
 
-#echo "Hello World!"
+#echo "Number and Color Work"
 
-LOOP_LIMIT=10
-EVEN_NUM
-ODD_NUM
-PRIME_NUM
 
 for i in $(seq 10);do
     if (( $i % 2 )); then
