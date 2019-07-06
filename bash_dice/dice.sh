@@ -1,25 +1,22 @@
 #!/usr/bin/env bash
 
-#!/usr/bin/env bash
-
-
 # echo Dice
 
-DOTS=1
-TTLDOTS=6
+MINVAL=1
+MAXVAL=6
+RANGE=$(($MAXVAL-$MINVAL+1))
 
-RANGE=$(($SPOTS-$TTLSPOTS+2))
 
-RESULT=$RANDOM
 
-#((die1 = $RANDOM % 6 + 1))
+for i in {1..5}
+do
+    RESULT=$RANDOM
+    let "RESULT %= $RANGE"
+    RESULT=$(( ( RANDOM % 6 )  + 1 ))
+    echo "Dice ${i}: $RESULT"
+done
 
-echo ${RESULT}
-
-let "RESULT %= $RANGE"
-RESULT=$(($RESULT+$SPOTS))
-
-echo "New Result: $RESULT"
+#ENDofSCRIPT
 
 
 #TODO:
